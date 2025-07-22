@@ -18,18 +18,44 @@ There will still be challenges to navigate, however through careful engagement w
 
 ## Purpose
 
-This standard defines a FHIR-based API approach to automate the first critical component of multiagency data exchange. It defines a pattern by which one organisation can ask other organisations: "Do you have information about a child within your system?" and receive a set of standardised replies.
+This standard defines a FHIR-based API approach to automate critical components of multiagency data exchange.
 
-It demonstrates the use of the [FHIR Parameters resource](https://hl7.org/fhir/parameters.html) as input and response payload, supports validation, and will  include a test environment to test sending and responding to queries.
+This first release defines a pattern by which one organisation can ask other organisations: "Do you have information about a child within your system?" and receive a set of standardised replies.
 
-## Proposed Features
+This applies to all agencies and organisations covered by relevant safeguarding and wellbeing legislation e.g. social care, health, welfare, education, etc.
 
-- Example FHIR Parameter resource API call
-- Example request and response payloads
+It provides a profile of the [FHIR Parameters resource](https://hl7.org/fhir/parameters.html) as request and response payload:
+
+- Constrained variant of [$match](https://hl7.org/fhir/operation-patient-match.html) operation.
+- Extends query with "reason" (legislation/purpose URI).
+- Binary response: YES (+contact details for further info) or NO.
+
+## Roadmap
+
+Proposed content for initial release:
+- Example FHIR Parameter resource API request and response payloads
+- StructureDefinition for new profile of Parameter resource, describing extensions and constraints
 - FHIR validation approach
-- Test server
+- Test server to test sending and responding to queries
+
+Subsequent releases will build on these capabilities to:
+- define audit and logging requirements
+- facilitate data exchange where a relevant care record, service involvement, observation or event is found.
+
+## How it works
+
+- Request includes child identifiers AND reason for request.
+- Response is YES/NO.
+- If YES, returns contact details for further enquiry.
+
+See: [docs/operation-definition.md](docs/operation-definition.md)
 
 ## Comparison with existing standards
+
+Several API based data exchange standards are already in production in Health and Social Care, however none fully meet the requirements for this use case. This is largely due to the range of partner organisations and systems and variations in the legal bases for sharing data.
+
+### [Personal Demographics Service - FHIR API](https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir)
+Access patients' personal information, such as name, address, date of birth, related people, registered GP, nominated pharmacy and NHS number using the FHIR version of the Personal Demographics Service (PDS) API.
 
 ### [Digital Child Health - FHIR](https://digital.nhs.uk/developer/api-catalogue/digital-child-health-fhir)
 Sharing information about a child's health between healthcare workers.
@@ -38,11 +64,15 @@ This integration uses a publish-subscribe model - the sending system publishes e
 
 Subscribed systems might be GPs, emergency departments, local authorities or some other care provider. Potentially, patients and carers could also share this information.
 
+This integration can only be used where there is a legal basis to do so.
+
 For details of the legal basis for sharing NEMS events, see the [NEMS controller catalogue](https://developer.nhs.uk/apis/ems-beta/controller_catalogue.html).
 
 ### [Child Protection - Information Sharing - HL7 V3 API](https://digital.nhs.uk/developer/api-catalogue/child-protection-information-sharing-hl7-v3)
 Access child protection information from Child Protection - Information Sharing (CP-IS) from a healthcare setting.
 
+### [National Record Locator (NRL)](https://digital.nhs.uk/services/national-record-locator/)
+Find and access patient information shared by other health and social care organisations, to support the direct care of a patient.
 
 
 
