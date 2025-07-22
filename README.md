@@ -29,6 +29,19 @@ It demonstrates the use of the [FHIR Parameters resource](https://hl7.org/fhir/p
 - FHIR validation approach
 - Test server
 
+## Comparison with existing standards
+
+### [Digital Child Health - FHIR](https://digital.nhs.uk/developer/api-catalogue/digital-child-health-fhir)
+Sharing information about a child's health between healthcare workers.
+
+This integration uses a publish-subscribe model - the sending system publishes events to [National Events Management Service (NEMS)](https://digital.nhs.uk/services/national-events-management-service), and NEMS forwards the events to all subscribed systems via [Message Exchange for Social Care and Health (MESH)](https://digital.nhs.uk/developer/guides-and-documentation/api-technologies-at-nhs-digital#mesh).
+
+Subscribed systems might be GPs, emergency departments, local authorities or some other care provider. Potentially, patients and carers could also share this information.
+
+For details of the legal basis for sharing NEMS events, see the [NEMS controller catalogue](https://developer.nhs.uk/apis/ems-beta/controller_catalogue.html).
+
+### [Child Protection - Information Sharing - HL7 V3 API](https://digital.nhs.uk/developer/api-catalogue/child-protection-information-sharing-hl7-v3)
+Access child protection information from Child Protection - Information Sharing (CP-IS) from a healthcare setting.
 
 
 
