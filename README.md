@@ -20,7 +20,7 @@ There will still be challenges to navigate, however through careful engagement w
 
 This standard defines a FHIR-based API approach to automate critical components of multiagency data exchange.
 
-This first release defines a pattern by which one organisation can ask other organisations: "Do you have information about a child within your system?" and receive a set of standardised replies.
+This first release proposes a pattern by which one organisation can ask other organisations: "Do you have information about a child within your system?" and receive a set of standardised replies.
 
 This applies to all agencies and organisations covered by relevant safeguarding and wellbeing legislation e.g. social care, health, welfare, education, etc.
 
@@ -28,7 +28,7 @@ It provides a profile of the [FHIR Parameters resource](https://hl7.org/fhir/par
 
 - Constrained variant of [$match](https://hl7.org/fhir/operation-patient-match.html) operation.
 - Extends query with "reason" (legislation/purpose URI).
-- Binary response: YES (+contact details for further info) or NO.
+- Binary response: YES (with contact details for further info) or NO.
 
 ## Roadmap
 
@@ -40,7 +40,8 @@ Proposed content for initial release:
 
 Subsequent releases will build on these capabilities to:
 - define audit and logging requirements
-- facilitate data exchange where a relevant care record, service involvement, observation or event is found.
+- facilitate data exchange where a relevant care record, service involvement, observation or event is found
+- support data exchange between centralised and decentralised systems
 
 ## How it works
 
@@ -49,6 +50,11 @@ Subsequent releases will build on these capabilities to:
 - If YES, returns contact details for further enquiry.
 
 See: [docs/operation-definition.md](docs/operation-definition.md)
+
+## Assumptions
+
+- The request and response should be system agnostic.
+- The implementation of the [match](https://build.fhir.org/patient-operation-match.html) operation may vary between systems.  
 
 ## Comparison with existing standards
 
