@@ -1,5 +1,8 @@
 ## Data Exchange Standard v0.1 - Early thinking to start discussions
 
+Status: Initial Draft
+Effective Date: 2025-08-07
+
 ### Introduction
 With regard to multiagency information sharing, we are aware of two dominant operating models currently in use across local authorities and their partners across Health and the Police. These are:
 
