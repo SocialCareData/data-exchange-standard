@@ -1,14 +1,14 @@
 ## Data Exchange Standard v0.1 - Early thinking to start discussions
 
 ### Introduction
-With regard to multiagency information sharing, we are aware of two dominant operating models currently in use across local authorities and their partners for example across health, education and the Police. These are:
+With regard to multiagency information sharing, we are aware of two dominant operating models currently in use across local authorities and their partners across health, education and the Police. These are:
 
 - **Centralised "data lake" models**: Where copies of relevant datasets are taken from internal and external source systems, transferred to a central location, with apps then deployed on top for practitioners to view the data
 - **Decentralised, API driven models**: Where connections are established between data sources, to allow for a temporary view of the other agencies' data for practitioners without the need to copy across or duplicate data
 
- The majority of "single view" tools in children's social care (CSC) currently deployed across the country are created as "data lake" models. However, these models have an intrinsic challenge with regard to scalability, governing duplicative data and data ownership. It has also been historically very difficult for local authorities to access person level health data, for example the 2024 Supporting Families Data survey conducted by the Department for Education finding that significantly fewer local authorities were able to access physical and mental health data for children and their families compared to children's services, education, financial, housing and crime data. Dispersed, API driven models are much more common across the NHS and adult social care, with shared care records generally being built on this principle.
+ The majority of "single view" tools in children's social care (CSC) currently deployed across the country are created as "data lake" models. However, these models have an intrinsic challenge with regard to scalability, governing duplicative data, and data ownership. It has also been historically very difficult for local authorities to access person level health data, as seen in the 2024 Supporting Families Data survey conducted by the Department for Education that found significantly fewer local authorities were able to access physical and mental health data for children and their families compared to children's services, education, financial, housing and crime data. Dispersed, API driven models are much more common across the NHS and adult social care, with shared care records generally being built on this principle.
 
- Civern the challenges and limitations of "data lake" models, we are focusing the first version of our Data Exchange standard on supporting **Decentralised, API driven models**:
+ Given the challenges and limitations of "data lake" models, we are focusing the first version of our Data Exchange standard on supporting **Decentralised, API driven models**:
 
 - We believe that both digitally mature and maturing local authorities will be able to benefit from this standard, through the introduction of a standardised way for common systems across the local authority, education, police and health to connect and share information between each other
 - We believe that Integrated Care Boards and NHS trusts are more likely to agree to information sharing arrangements based on API driven models, due to them being able to retain greater control of the data being shared
