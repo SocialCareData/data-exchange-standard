@@ -4,12 +4,12 @@ Based on [FHIR $match](https://hl7.org/fhir/operation-patient-match.html), retur
 
 ## Example endpoint
 
-`POST [base]/Patient/$child-info-query`
+`POST [base]/Patient/$person-info-query`
 
 ## Request
 
 A FHIR [Parameters](https://hl7.org/fhir/parameters.html) resource:
-- `resource`: a Patient resource (child details – identifiers, DoB, names)
+- `resource`: a Patient resource (person details – identifiers, DoB, names)
 - `reason`: URI string for legal justification (e.g., Children Act s47 investigation)
 
 ```json
