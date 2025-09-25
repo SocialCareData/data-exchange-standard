@@ -1,7 +1,8 @@
-## Data Exchange Standard v0.1 - Early thinking to start discussions
+## Data Exchange Standard - Early thinking to start discussions
 
-Status: Initial Draft
-Effective Date: 2025-08-07
+Status: Version 0.2 - refining our early thinking after various discussions
+
+Effective Date: 2025-09-25
 
 ### Introduction
 With regard to multiagency information sharing, we are aware of two dominant operating models currently in use across local authorities and their partners across health, education and the Police. These are:
@@ -30,8 +31,11 @@ This applies to all agencies and organisations covered by relevant safeguarding 
 It provides a profile of the [FHIR Parameters resource](https://hl7.org/fhir/parameters.html) as request and response payload:
 
 - Constrained variant of [$match](https://hl7.org/fhir/operation-patient-match.html) operation.
-- Extends query with "reason" (legislation/purpose URI).
-- Binary response: YES (with contact details for further info) or NO.
+- Extends query with "reason" code - with values from an agreed vocabulary / codelist.
+- Response indicates whether the person is known to the system, and whether there is an active sevice involvement, with contact details for further information.
+
+Around this technical specificiation, there are a set of conditions which are required to support trusted machine-to-machine data exchange that is proportionate and effective. These are being explored under [Information Governance](https://github.com/SocialCareData/taxonomy/blob/main/information_governance.md).
+
 
 ## Roadmap
 
@@ -40,11 +44,12 @@ Proposed content for initial release:
 - StructureDefinition for new profile of Parameter resource, describing extensions and constraints
 - FHIR validation approach
 - Test server and dummy data to test sending and responding to queries
-- Links to the person standard and the taxonomy
+- Links to the person standard, registry of participating organisations/systems, shared vocabularies.
+- Audit and logging requirements
 
 
 Subsequent releases will build on these capabilities to:
-- define audit and logging requirements
+
 - define data linking / matching requirements, tests and expected performance. This will include thresholds for probability matching and agreed approaches for example in the case of multiple possible matches.
 - facilitate data exchange where a relevant care record, service involvement, observation or event is found
 - support data exchange between centralised and decentralised systems
@@ -52,8 +57,9 @@ Subsequent releases will build on these capabilities to:
 ## How it works
 
 - Request includes person identifiers AND reason for request.
-- Response is YES/NO.
-- If YES, returns contact details for further enquiry.
+- Request issued by an autorised person using a recognised, validated system.
+- An agreed decision rules process defines if a response can be shared automatically or not, or if an escalation required.
+- If person known or 'open' on the system, returns contact details for further enquiry.
 
 See: [docs/operation-definition.md](docs/operation-definition.md)
 
