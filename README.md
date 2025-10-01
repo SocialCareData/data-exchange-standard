@@ -5,6 +5,8 @@ Status: Version 0.2 - refining our early thinking after various discussions
 Effective Date: 2025-09-25
 
 ### Introduction
+![conceptual_model.png](conceptual_model.png)
+
 With regard to multiagency information sharing, we are aware of two dominant operating models currently in use across local authorities and their partners across health, education and the Police. These are:
 
 - **Centralised "data lake" models**: Where copies of relevant datasets are taken from internal and external source systems, transferred to a central location, with apps then deployed on top for practitioners to view the data
