@@ -7,6 +7,8 @@ Effective Date: 2025-09-25
 ### Introduction
 ![conceptual_model.png](https://github.com/SocialCareData/data-exchange-standard/blob/main/conceptual_model_cropped.png?raw=true)
 
+<a href="https://github.com/SocialCareData/data-exchange-standard/issues/new?template=content_issue.yml&title=Issue+regarding+Conceptual+Model" class="web-button" target="_blank">Raise an issue about the Conceptual Model</a>
+
 With regard to multiagency information sharing, we are aware of two dominant operating models currently in use across local authorities and their partners across health, education and the Police. These are:
 
 - **Centralised "data lake" models**: Where copies of relevant datasets are taken from internal and external source systems, transferred to a central location, with apps then deployed on top for practitioners to view the data
