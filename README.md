@@ -27,6 +27,15 @@ The following visual illustrates how the various standards fit togther:
 
 <a href="https://github.com/SocialCareData/data-exchange-standard/issues/new?template=content_issue.yml&title=Issue+regarding+Conceptual+Model" class="web-button" target="_blank">Raise an issue about the Conceptual Model</a>
 
+**Relevant standards**
+1) Data Exchange standards - APIs (this repo)
+2) Person standard (Identification)
+3) Standards for information governance
+4) Matching specifiction (to be developed)
+5) Servce involvements (part of the API response, to be developed in this repo)
+6) Controlled vocabularies
+7) API Catalogue Standard
+
 ## Centralised or Decentralised
 
 With regard to multiagency information sharing, we are aware of two dominant operating models currently in use across local authorities and their partners across health, education and the Police. These are:
@@ -58,7 +67,7 @@ It provides a profile of the [FHIR Parameters resource](https://hl7.org/fhir/par
 - Extends query with "reason" code - with values from an agreed vocabulary / codelist.
 - Response indicates whether the person is known to the system, with basic details of sevice involvements, and with contact details for further information.
 
-Around this technical specificiation, there are a set of conditions which are required to support trusted machine-to-machine data exchange that is proportionate and effective. These are being explored under [Information Governance](https://github.com/SocialCareData/taxonomy/blob/main/information_governance.md).
+Around this technical specificiation, there are a set of conditions which are required to support trusted machine-to-machine data exchange that is proportionate and effective. These are being explored under [Information Governance](https://github.com/SocialCareData/information-governance).
 
 
 ## Roadmap
