@@ -5,9 +5,12 @@ Status: Version 0.2 - refining our early thinking after various discussions
 Effective Date: 2025-09-25
 
 ### Introduction
+![model_of_parties_and_information.png](https://github.com/SocialCareData/data-exchange-standard/blob/main/model_of_parties_and_information.png?raw=true)
+
 ![conceptual_model.png](https://github.com/SocialCareData/data-exchange-standard/blob/main/conceptual_model_cropped.png?raw=true)
 
 <a href="https://github.com/SocialCareData/data-exchange-standard/issues/new?template=content_issue.yml&title=Issue+regarding+Conceptual+Model" class="web-button" target="_blank">Raise an issue about the Conceptual Model</a>
+
 
 With regard to multiagency information sharing, we are aware of two dominant operating models currently in use across local authorities and their partners across health, education and the Police. These are:
 
