@@ -1,16 +1,33 @@
-## Data Exchange Standard - Early thinking to start discussions
+## Data Exchange Standard
 
-Status: Version 0.2 - refining our early thinking after various discussions
+Status: Version 0.3 - clarifying our conceptual model and components of the standard
 
-Effective Date: 2025-09-25
+Effective Date: 2025-10-08
 
 ### Introduction
+
+At the MAIS standards working group on 8th October we presented a simplified view of the conceptual model we are working with. We know safeguarding professionals want a range of information from different systems across the safeguarding partnership. ​As organisations and systems are dispersed, there are three challenges we need to overcome when thinking about describing elements: ​
+- We need to identify where information is held ​
+- We need to determine the conditions to permit sharing ​
+- We need to define what sort of information will be shared
+
 ![model_of_parties_and_information.png](https://github.com/SocialCareData/data-exchange-standard/blob/main/model_of_parties_and_information.png?raw=true)
+
+In this simplified view, there are three types of shareable information:
+- Involvement: A sustained interaction between a service and an individual of interest to a
+safeguarding professional.
+- State: A status of an individual that would be of interest to a safeguarding professional ​e.g. Family receiving housing support, free school meals, persistent school absence. ​
+- ​Events: A specific incident that would be of interest to a safeguarding professional ​e.g. A+E attendance, missing person incident, DV incident, exclusions.
+
+For our intial development and testing of standards to support multiagency data exchange, we are focussing on involvements.
+
+The following visual illustrates how the various standards fit togther:
 
 ![conceptual_model.png](https://github.com/SocialCareData/data-exchange-standard/blob/main/conceptual_model_cropped.png?raw=true)
 
 <a href="https://github.com/SocialCareData/data-exchange-standard/issues/new?template=content_issue.yml&title=Issue+regarding+Conceptual+Model" class="web-button" target="_blank">Raise an issue about the Conceptual Model</a>
 
+## Centralised or Decentralised
 
 With regard to multiagency information sharing, we are aware of two dominant operating models currently in use across local authorities and their partners across health, education and the Police. These are:
 
@@ -35,11 +52,11 @@ This first release proposes a pattern by which one organisation can ask other or
 
 This applies to all agencies and organisations covered by relevant safeguarding and wellbeing legislation e.g. social care, health, welfare, education, etc.
 
-It provides a profile of the [FHIR Parameters resource](https://hl7.org/fhir/parameters.html) as request and response payload:
+It provides a profile of the [FHIR Parameters resource](https://hl7.org/fhir/parameters.html) as request payload:
 
 - Constrained variant of [$match](https://hl7.org/fhir/operation-patient-match.html) operation.
 - Extends query with "reason" code - with values from an agreed vocabulary / codelist.
-- Response indicates whether the person is known to the system, and whether there is an active sevice involvement, with contact details for further information.
+- Response indicates whether the person is known to the system, with basic details of sevice involvements, and with contact details for further information.
 
 Around this technical specificiation, there are a set of conditions which are required to support trusted machine-to-machine data exchange that is proportionate and effective. These are being explored under [Information Governance](https://github.com/SocialCareData/taxonomy/blob/main/information_governance.md).
 
@@ -63,7 +80,7 @@ Subsequent releases will build on these capabilities to:
 
 ## How it works
 
-- Request includes person identifiers AND reason for request.
+- Request includes person identifiers AND reason for request and relevant information governance assertions
 - Request issued by an autorised person using a recognised, validated system.
 - An agreed decision rules process defines if a response can be shared automatically or not, or if an escalation required.
 - If person known or 'open' on the system, returns contact details for further enquiry.
