@@ -1,8 +1,8 @@
-# NOTE: This page needs updating to reflect v0.2
+# NOTE: This page needs updating to reflect v0.3
 
 # Operation: Check relevant record exists
 
-Based on [FHIR $match](https://hl7.org/fhir/operation-patient-match.html), returning only YES/NO and agency contact.
+Based on [FHIR $match](https://hl7.org/fhir/operation-patient-match.html), returning basic details of service involvments
 
 ## Example endpoint
 
