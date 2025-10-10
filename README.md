@@ -29,12 +29,12 @@ The following visual illustrates how the various standards fit togther:
 
 **Relevant standards**
 1) Data Exchange standards - APIs (this repo)
-2) Person standard (Identification)
-3) Standards for information governance
-4) Matching specifiction (to be developed)
+2) [Person standard (Identification)](https://github.com/SocialCareData/person-standard)
+3) [Standards for information governance](https://github.com/SocialCareData/information-governance)
+4) Matching specifiction (to be developed in this repo)
 5) Servce involvements (part of the API response, to be developed in this repo)
-6) Controlled vocabularies
-7) API Catalogue Standard
+6) [Controlled vocabularies](https://github.com/SocialCareData/controlled-vocabularies)
+7) [API Catalogue Standard](https://github.com/SocialCareData/API-Catalogue)
 
 ## Centralised or Decentralised
 
